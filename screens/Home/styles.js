@@ -1,14 +1,14 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  container: {
+  text: {
+    fontSize: 30,
+    // fontVariant: "oldstyle-nums",
+    fontWeight: "500",
+  },
+  textContainer: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-  },
-  text: {
-    fontSize: 30,
-    fontVariant: "oldstyle-nums",
-    fontWeight: "500",
   },
 });

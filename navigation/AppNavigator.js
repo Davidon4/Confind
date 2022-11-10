@@ -18,7 +18,6 @@ export default function ScreenStack() {
             headerTitleAlign: "center",
             headerShadowVisible: false,
             headerTitleStyle: "center",
-            // headerRight: () => <HeaderTab />,
           }}
         />
         <Stack.Screen
