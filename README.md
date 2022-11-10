@@ -1,4 +1,4 @@
-## EXPLORE.
+## CONFIND
 
 ## Table of Contents
 
