@@ -3,7 +3,7 @@ import { View, Text } from "react-native";
 import ThemeContext from "../../config/ThemeContext";
 import { styles } from "./styles";
 
-function Home() {
+const Home = () => {
   const theme = useContext(ThemeContext);
   return (
     <View style={[styles.textContainer, { backgroundColor: theme.background }]}>
@@ -12,6 +12,6 @@ function Home() {
       </Text>
     </View>
   );
-}
+};
 
 export default Home;
