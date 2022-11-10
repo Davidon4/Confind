@@ -1,4 +1,4 @@
-## CONFIND_APP
+## CONFIND
 
 ## Table of Contents
 
