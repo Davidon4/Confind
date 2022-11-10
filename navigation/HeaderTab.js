@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { SafeAreaView, Switch } from "react-native";
-
 import { EventRegister } from "react-native-event-listeners";
 
 const HeaderTabs = ({}) => {
@@ -19,3 +18,10 @@ const HeaderTabs = ({}) => {
 };
 
 export default HeaderTabs;
+
+{
+  /* <Feather name="sun" size={24} color="black" /> */
+}
+{
+  /* <Feather name="moon" size={24} color="black" /> */
+}

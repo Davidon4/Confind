@@ -1,15 +1,13 @@
 export const theme = {
   light: {
-    theme: "light",
-    color: "black",
-    background: "white",
-    icon: "black",
+    theme: "#FFFFFF",
+    color: "#000F24",
+    background: "#FFFFFF",
   },
   dark: {
-    theme: "dark",
-    color: "white",
-    background: "black",
-    icon: "white",
+    theme: "#000F24",
+    color: "#FFFFFF",
+    background: "#000F24",
   },
 };
 
