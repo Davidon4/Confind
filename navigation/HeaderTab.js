@@ -18,10 +18,3 @@ const HeaderTabs = ({}) => {
 };
 
 export default HeaderTabs;
-
-{
-  /* <Feather name="sun" size={24} color="black" /> */
-}
-{
-  /* <Feather name="moon" size={24} color="black" /> */
-}

@@ -27,8 +27,9 @@ export default function ScreenStack() {
           name="CountryDetails"
           component={CountryDetails}
           options={{
+            title: "",
             headerTitleAlign: "center",
-            title: "CountryDetails",
+            title: "",
             headerShadowVisible: false,
             headerBackTitle: "Back",
           }}

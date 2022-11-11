@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { TextInput, View } from "react-native";
 import ThemeContext from "../../config/ThemeContext";
 import { styles } from "./styles";
@@ -6,6 +6,7 @@ import { Feather } from "@expo/vector-icons";
 
 const Search = ({ value, onChangeText }) => {
   const theme = useContext(ThemeContext);
+
   return (
     <View
       style={[styles.inputContainer, { backgroundColor: theme.searchColor }]}

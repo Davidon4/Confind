@@ -1,27 +1,13 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useContext } from "react";
 import { SectionList, Text, View } from "react-native";
 import { styles } from "./styles";
 import ListItem from "../../components/ListItem";
 import { useNavigation } from "@react-navigation/native";
 import ThemeContext from "../../config/ThemeContext";
-import axios from "axios";
 
-const List = () => {
+const List = ({ data }) => {
   const navigation = useNavigation();
   const theme = useContext(ThemeContext);
-  const [data, setData] = useState([]);
-  console.log(data);
-
-  useEffect(() => {
-    axios
-      .get("https://restcountries.com/v3.1/all")
-      .then((response) => {
-        setData(response.data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }, []);
 
   const renderItem = ({ item }) => {
     const onCountryPress = () => {
@@ -40,11 +26,11 @@ const List = () => {
       };
 
       let currCountries = data.filter((item) => {
-        return item.name.common[0].toUpperCase() === currChar;
+        return item?.name?.common[0].toUpperCase() === currChar;
       });
       if (currCountries.length > 0) {
         currCountries.sort((a, b) =>
-          a.name.common.localeCompare(b.name.common)
+          a?.name?.common?.localeCompare(b.name.common)
         );
         obj.data = currCountries;
         countriesArr.push(obj);
