@@ -1,15 +1,17 @@
-import React, { useContext } from "react";
-import { View, Text } from "react-native";
+import React, { useContext, useEffect, useState } from "react";
+import { Text, View } from "react-native";
+import Search from "../../components/Search";
 import ThemeContext from "../../config/ThemeContext";
+import List from "../List";
 import { styles } from "./styles";
 
 const Home = () => {
   const theme = useContext(ThemeContext);
+
   return (
     <View style={[styles.textContainer, { backgroundColor: theme.background }]}>
-      <Text style={[styles.text, { color: theme.color }]}>
-        This is the Home Screen!!
-      </Text>
+      <Search />
+      <List />
     </View>
   );
 };

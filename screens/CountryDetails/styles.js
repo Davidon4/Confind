@@ -1,11 +1,13 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  text: {
-    fontSize: 30,
-    fontWeight: "500",
-  },
-  textContainer: {
+  container: {
     flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  text: {
+    fontSize: 20,
+    fontWeight: "500",
   },
 });
