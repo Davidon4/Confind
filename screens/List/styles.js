@@ -9,7 +9,6 @@ export const styles = StyleSheet.create({
     marginTop: 30,
   },
   sectionHeader: {
-    // backgroundColor: "#efefef",
     paddingHorizontal: 20,
     paddingVertical: 10,
   },

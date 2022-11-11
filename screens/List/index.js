@@ -2,12 +2,13 @@ import React, { useEffect, useState, useContext } from "react";
 import { SectionList, Text, View } from "react-native";
 import { styles } from "./styles";
 import ListItem from "../../components/ListItem";
+import { useNavigation } from "@react-navigation/native";
 import ThemeContext from "../../config/ThemeContext";
 
-const List = ({ navigation }) => {
+const List = () => {
+  const navigation = useNavigation();
   const theme = useContext(ThemeContext);
   const [data, setData] = useState([]);
-  console.log(data);
 
   useEffect(() => {
     fetch("https://restcountries.com/v3.1/all")
@@ -19,7 +20,6 @@ const List = ({ navigation }) => {
   const renderItem = ({ item }) => {
     const onCountryPress = () => {
       navigation.navigate("CountryDetails");
-      console.log("Item =>", item);
     };
     return <ListItem onPress={onCountryPress} {...item} />;
   };
