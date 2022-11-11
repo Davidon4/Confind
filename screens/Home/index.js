@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, useRef } from "react";
 import { Text, View } from "react-native";
 import Search from "../../components/Search";
 import ThemeContext from "../../config/ThemeContext";

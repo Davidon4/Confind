@@ -4,22 +4,28 @@ import { styles } from "./styles";
 import ListItem from "../../components/ListItem";
 import { useNavigation } from "@react-navigation/native";
 import ThemeContext from "../../config/ThemeContext";
+import axios from "axios";
 
 const List = () => {
   const navigation = useNavigation();
   const theme = useContext(ThemeContext);
   const [data, setData] = useState([]);
+  console.log(data);
 
   useEffect(() => {
-    fetch("https://restcountries.com/v3.1/all")
-      .then((response) => response.json())
-      .then((json) => setData(json))
-      .catch((error) => console.error(error));
+    axios
+      .get("https://restcountries.com/v3.1/all")
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   }, []);
 
   const renderItem = ({ item }) => {
     const onCountryPress = () => {
-      navigation.navigate("CountryDetails");
+      navigation.navigate("CountryDetails", { country: item });
     };
     return <ListItem onPress={onCountryPress} {...item} />;
   };

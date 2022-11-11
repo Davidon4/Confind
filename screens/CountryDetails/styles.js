@@ -1,13 +1,24 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
+
+const { height } = Dimensions.get("window");
 
 export const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
+  imageContainer: {
+    marginTop: "5%",
+    paddingHorizontal: 17,
   },
-  text: {
-    fontSize: 20,
+  image: {
+    width: "100%",
+    height: height / 3.5,
+    borderRadius: 10,
+  },
+  content: {
+    marginTop: 20,
+  },
+  textStyle: {
+    fontSize: 16,
     fontWeight: "500",
+    color: "#1C1917",
+    paddingHorizontal: 17,
   },
 });

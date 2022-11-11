@@ -4,7 +4,7 @@ import ThemeContext from "../../config/ThemeContext";
 import { styles } from "./styles";
 import { Feather } from "@expo/vector-icons";
 
-const Search = ({ value, setValue }) => {
+const Search = ({ value, onChangeText }) => {
   const theme = useContext(ThemeContext);
   return (
     <View
@@ -16,7 +16,7 @@ const Search = ({ value, setValue }) => {
       <TextInput
         style={{ flex: 0.95 }}
         value={value}
-        onChangeText={(text) => setValue(text)}
+        onChangeText={onChangeText}
         placeholder="Search Country"
         textAlign="center"
         placeholderTextColor={theme.placeholder}
