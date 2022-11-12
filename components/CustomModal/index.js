@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View, Modal, Button, SafeAreaView } from "react-native";
-import RadioButton from "./RadioButton";
+import RadioButton from "../RadioButton";
 import { initialFilter } from "../../data/initialFilter";
 
 const CustomModal = ({
@@ -9,6 +9,7 @@ const CustomModal = ({
   intermediateFilter,
   setIntermediateFilter,
   continentResult,
+  allCountries,
   setFilter,
 }) => {
   return (
@@ -24,7 +25,7 @@ const CustomModal = ({
     >
       <SafeAreaView style={{ flex: 1, padding: 20 }}>
         <View style={{ marginBottom: 20, paddingHorizontal: 30 }}>
-          <Text style={{ fontSize: 26 }}>Filter</Text>
+          <Text style={{ fontSize: 26, alignSelf: "center" }}>Filter</Text>
         </View>
 
         <RadioButton

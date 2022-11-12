@@ -33,7 +33,7 @@ const CountryDetails = ({ route }) => {
         <View style={styles.content}>
           <Text style={[styles.textStyle, { color: theme.list }]}>
             Official language:{" "}
-            <Text style={{ fontWeight: "300" }}>{country?.[languages]}</Text>
+            <Text style={{ fontWeight: "300" }}>{country?.languages[""]}</Text>
           </Text>
           <Text style={[styles.textStyle, { color: theme.list }]}>
             Ethnic group:{" "}

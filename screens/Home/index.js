@@ -35,6 +35,8 @@ const Home = () => {
     .map((item) => item?.continents)
     .filter((value, index, self) => self.indexOf(value) === index);
 
+  console.log("Continent Result=>", continentResult);
+
   const searchFilter = (text) => {
     if (text) {
       const newData = data.filter(function (item) {
@@ -66,7 +68,7 @@ const Home = () => {
         continentResult={continentResult}
         allCountries={allCountries}
       />
-      <List data={filteredData} />
+      <List data={filteredData} allCountries={allCountries} filter={filter} />
     </View>
   );
 };
