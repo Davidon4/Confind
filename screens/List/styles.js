@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     alignSelf: "stretch",
     paddingVertical: 20,
-    marginTop: 30,
+    marginTop: 20,
   },
   sectionHeader: {
     paddingHorizontal: 20,

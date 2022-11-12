@@ -5,12 +5,14 @@ import ThemeContext from "../../config/ThemeContext";
 import List from "../List";
 import { styles } from "./styles";
 import axios from "axios";
+import AppBar from "../../components/AppBar";
 
 const Home = () => {
   const theme = useContext(ThemeContext);
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
   const [filteredData, setFilteredData] = useState([]);
+  const [modalVisible, setModalVisible] = useState(false);
   useEffect(() => {
     axios
       .get("https://restcountries.com/v3.1/all")
@@ -43,6 +45,7 @@ const Home = () => {
   return (
     <View style={[styles.textContainer, { backgroundColor: theme.background }]}>
       <Search onChangeText={(text) => searchFilter(text)} value={search} />
+      <AppBar setModalVisible={setModalVisible} modalVisible={modalVisible} />
       <List data={filteredData} />
     </View>
   );

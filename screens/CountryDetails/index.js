@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
+import ThemeContext from "../../config/ThemeContext";
 import { styles } from "./styles";
 import { ScrollView, Text, Image, View } from "react-native";
-import ThemeContext from "../../config/ThemeContext";
 
 const CountryDetails = ({ route }) => {
   const theme = useContext(ThemeContext);
@@ -29,60 +29,21 @@ const CountryDetails = ({ route }) => {
             Capital:{" "}
             <Text style={{ fontWeight: "300" }}>{country?.capital}</Text>
           </Text>
-          <Text style={[styles.textStyle, { color: theme.list }]}>
-            Motto: <Text style={{ fontWeight: "300" }}>{country?.capital}</Text>
-          </Text>
         </View>
         <View style={styles.content}>
           <Text style={[styles.textStyle, { color: theme.list }]}>
             Official language:{" "}
-            <Text style={{ fontWeight: "300" }}>{country?.languages[""]}</Text>
+            <Text style={{ fontWeight: "300" }}>{country?.[languages]}</Text>
           </Text>
           <Text style={[styles.textStyle, { color: theme.list }]}>
             Ethnic group:{" "}
             <Text style={{ fontWeight: "300" }}>{country?.region}</Text>
           </Text>
           <Text style={[styles.textStyle, { color: theme.list }]}>
-            Religion:{" "}
-            <Text style={{ fontWeight: "300" }}>{country?.capital}</Text>
+            Religion: {country?.capital}
           </Text>
           <Text style={[styles.textStyle, { color: theme.list }]}>
-            Government:{" "}
-            <Text style={{ fontWeight: "300" }}>{country?.capital}</Text>
-          </Text>
-        </View>
-        <View style={styles.content}>
-          <Text style={[styles.textStyle, { color: theme.list }]}>
-            Independence:{" "}
-            <Text style={{ fontWeight: "300" }}>{country?.independent}</Text>
-          </Text>
-          <Text style={[styles.textStyle, { color: theme.list }]}>
-            Area: <Text style={{ fontWeight: "300" }}>{country?.region}</Text>
-          </Text>
-          <Text style={[styles.textStyle, { color: theme.list }]}>
-            Currency:{" "}
-            <Text style={{ fontWeight: "300" }}>{country?.capital}</Text>
-          </Text>
-          <Text style={[styles.textStyle, { color: theme.list }]}>
-            GDP: <Text style={{ fontWeight: "300" }}>{country?.capital}</Text>
-          </Text>
-        </View>
-        <View style={styles.content}>
-          <Text style={[styles.textStyle, { color: theme.list }]}>
-            Time zone:{" "}
-            <Text style={{ fontWeight: "300" }}>{country?.languages[""]}</Text>
-          </Text>
-          <Text style={[styles.textStyle, { color: theme.list }]}>
-            Date format:{" "}
-            <Text style={{ fontWeight: "300" }}>{country?.region}</Text>
-          </Text>
-          <Text style={[styles.textStyle, { color: theme.list }]}>
-            Dialing code:{" "}
-            <Text style={{ fontWeight: "300" }}>{country?.capital}</Text>
-          </Text>
-          <Text style={[styles.textStyle, { color: theme.list }]}>
-            Driving side:{" "}
-            <Text style={{ fontWeight: "300" }}>{country?.capital}</Text>
+            Government: {country?.capital}
           </Text>
         </View>
       </ScrollView>
