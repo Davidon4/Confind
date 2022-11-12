@@ -8,9 +8,8 @@ The main goal of this application is to create a React Application to show a lis
 - [The codebase and how it works](#the-codebase-and-how-it-works)
 - [Libraries used and Why](#libraries-used-and-why)
 - [Features I would like to add if there is more time](#features-i-would-like-to-add-if-there-is-more-time)
-- [Screenshots](#screenshots)
 - [Link to the Apk file](#link-to-the-apk-file)
-- [Link to the Appetize.io](#link-to-the-appetize.io)
+- [Link to the Appetize.io and usage](#link-to-the-appetize.io)
 - [Usage](#usage)
 
 ## The app and its features
@@ -37,3 +36,20 @@ The following are the folder used and what they mean:
 - react-native-event-listeners: I was able to bypass using redux and with react native event listener i passed a touch event on the which controls the theme of the app
 - @react-navigation/native and @react-navigation/native-stack: With react native navigation, it was easy to navigate across the app
 - expo-font: I was able to create a design from the figma design using google font in which expo supports
+
+## Features I would like to add if there is more time
+
+I am currently behind schedule and having issues with light and network, I hope I am able to finish this project at the point of writing this readme and submit it before the ddeadline.
+
+## Link to the Apk file
+
+## Link to the Appetize.io and usage
+
+## Usage
+
+Clone the app and in your terminal input git clone with github url, when it is done. Do the following
+
+```
+$ yarn install
+$ yarn start
+```
