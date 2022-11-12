@@ -30,3 +30,10 @@ The following are the folder used and what they mean:
 - The data component stores the array of the filtered object
 - The config component which has the context and the theme file stores the theme of the app
 - The app.js file is the parent file that runs in the app
+
+## Libraries used and Why
+
+- @expo-vector-icons: I was able add icons to the app
+- react-native-event-listeners: I was able to bypass using redux and with react native event listener i passed a touch event on the which controls the theme of the app
+- @react-navigation/native and @react-navigation/native-stack: With react native navigation, it was easy to navigate across the app
+- expo-font: I was able to create a design from the figma design using google font in which expo supports
