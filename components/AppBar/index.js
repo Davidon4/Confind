@@ -11,7 +11,10 @@ const AppBar = ({ setModalVisible, modalVisible }) => {
       <TouchableOpacity style={styles.iconContainer1}>
         <AntDesign name="earth" size={24} color={theme.list} />
       </TouchableOpacity>
-      <TouchableOpacity style={styles.iconContainer2}>
+      <TouchableOpacity
+        style={styles.iconContainer2}
+        onPress={() => setModalVisible(!modalVisible)}
+      >
         <AntDesign name="filter" size={24} color={theme.list} />
         <Text style={{ color: theme.list }}>Filter</Text>
       </TouchableOpacity>

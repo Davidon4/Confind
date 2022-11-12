@@ -1,4 +1,4 @@
 export const initialFilter = {
-  continent: "",
+  continents: "",
   timezone: "",
 };

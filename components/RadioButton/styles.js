@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     paddingVertical: 5,
     alignItems: "center",
     flexDirection: "row",
-    justifyContent: "flex-start",
+    // justifyContent: "flex-start",
     flexWrap: "wrap",
   },
   radioText: {
