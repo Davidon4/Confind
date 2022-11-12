@@ -43,10 +43,46 @@ const CountryDetails = ({ route }) => {
             <Text style={{ fontWeight: "300" }}>{country?.region}</Text>
           </Text>
           <Text style={[styles.textStyle, { color: theme.list }]}>
-            Religion: {country?.capital}
+            Religion:{" "}
+            <Text style={{ fontWeight: "300" }}>{country?.capital}</Text>
           </Text>
           <Text style={[styles.textStyle, { color: theme.list }]}>
-            Government: {country?.capital}
+            Government:{" "}
+            <Text style={{ fontWeight: "300" }}>{country?.capital}</Text>
+          </Text>
+        </View>
+        <View style={styles.content}>
+          <Text style={[styles.textStyle, { color: theme.list }]}>
+            Independence:{" "}
+            <Text style={{ fontWeight: "300" }}>{country?.languages[""]}</Text>
+          </Text>
+          <Text style={[styles.textStyle, { color: theme.list }]}>
+            Area: <Text style={{ fontWeight: "300" }}>{country?.region}</Text>
+          </Text>
+          <Text style={[styles.textStyle, { color: theme.list }]}>
+            Currency:{" "}
+            <Text style={{ fontWeight: "300" }}>{country?.capital}</Text>
+          </Text>
+          <Text style={[styles.textStyle, { color: theme.list }]}>
+            GDP: <Text style={{ fontWeight: "300" }}>{country?.capital}</Text>
+          </Text>
+        </View>
+        <View style={styles.content}>
+          <Text style={[styles.textStyle, { color: theme.list }]}>
+            Time Zone:{" "}
+            <Text style={{ fontWeight: "300" }}>{country?.languages[""]}</Text>
+          </Text>
+          <Text style={[styles.textStyle, { color: theme.list }]}>
+            Date format:{" "}
+            <Text style={{ fontWeight: "300" }}>{country?.region}</Text>
+          </Text>
+          <Text style={[styles.textStyle, { color: theme.list }]}>
+            Dailing code:{" "}
+            <Text style={{ fontWeight: "300" }}>{country?.capital}</Text>
+          </Text>
+          <Text style={[styles.textStyle, { color: theme.list }]}>
+            Driving side:{" "}
+            <Text style={{ fontWeight: "300" }}>{country?.capital}</Text>
           </Text>
         </View>
       </ScrollView>
