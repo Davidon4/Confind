@@ -29,6 +29,9 @@ const CountryDetails = ({ route }) => {
             Capital:{" "}
             <Text style={{ fontWeight: "300" }}>{country?.capital}</Text>
           </Text>
+          <Text style={[styles.textStyle, { color: theme.list }]}>
+            Motto: <Text style={{ fontWeight: "300" }}>{country?.capital}</Text>
+          </Text>
         </View>
         <View style={styles.content}>
           <Text style={[styles.textStyle, { color: theme.list }]}>

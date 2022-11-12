@@ -9,9 +9,9 @@ export const theme = {
     section: "#667085",
   },
   dark: {
-    theme: "dark",
+    theme: "#000000",
     color: "#FFFFFF",
-    background: "#000F24",
+    background: "#000000",
     searchColor: "#98A2B3",
     placeholder: "#EAECF0",
     list: "#F2F4F7",
