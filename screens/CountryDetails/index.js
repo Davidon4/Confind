@@ -54,7 +54,9 @@ const CountryDetails = ({ route }) => {
         <View style={styles.content}>
           <Text style={[styles.textStyle, { color: theme.list }]}>
             Independence:{" "}
-            <Text style={{ fontWeight: "300" }}>{country?.independent}</Text>
+            <Text style={{ fontWeight: "300" }}>
+              {country?.["independent"]}
+            </Text>
           </Text>
           <Text style={[styles.textStyle, { color: theme.list }]}>
             Area: <Text style={{ fontWeight: "300" }}>{country?.area}</Text>
