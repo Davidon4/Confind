@@ -4,8 +4,9 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "../screens/Home";
 import CountryDetails from "../screens/CountryDetails";
 import List from "../screens/List";
-import HeaderTab from "./HeaderTab";
-import HeaderTitle from "./HeaderTitle";
+import MainAppBar from "./MainAppBar";
+// import HeaderTab from "./HeaderTab";
+// import HeaderTitle from "./HeaderTitle";
 
 const Stack = createNativeStackNavigator();
 
@@ -16,23 +17,26 @@ export default function ScreenStack() {
         <Stack.Screen
           name="Home"
           component={Home}
-          options={{
-            title: "",
-            headerShadowVisible: false,
-            headerRight: () => <HeaderTab />,
-            headerLeft: () => <HeaderTitle />,
+          screenOptions={{
+            header: (props) => <MainAppBar {...props} />,
           }}
+          // options={{
+          //   title: "",
+          //   headerShadowVisible: false,
+          //   headerRight: () => <HeaderTab />,
+          //   headerLeft: () => <HeaderTitle />,
+          // }}
         />
         <Stack.Screen
           name="CountryDetails"
           component={CountryDetails}
-          options={{
-            title: "",
+          options={({ route }) => ({
+            title: route?.params?.name?.common,
             headerTitleAlign: "center",
             title: "",
             headerShadowVisible: false,
             headerBackTitle: "Back",
-          }}
+          })}
         />
         <Stack.Screen
           name="List"

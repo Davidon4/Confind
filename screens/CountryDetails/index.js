@@ -20,7 +20,9 @@ const CountryDetails = ({ route }) => {
         <View style={styles.content}>
           <Text style={[styles.textStyle, { color: theme.list }]}>
             Population:{" "}
-            <Text style={{ fontWeight: "300" }}>{country?.population}</Text>
+            <Text style={{ fontWeight: "300" }}>
+              {country?.population.toLocaleString("en-US")}
+            </Text>
           </Text>
           <Text style={[styles.textStyle, { color: theme.list }]}>
             Region: <Text style={{ fontWeight: "300" }}>{country?.region}</Text>
@@ -36,7 +38,11 @@ const CountryDetails = ({ route }) => {
         <View style={styles.content}>
           <Text style={[styles.textStyle, { color: theme.list }]}>
             Official language:{" "}
-            <Text style={{ fontWeight: "300" }}>{country?.languages[""]}</Text>
+            {Object.entries(country?.languages || {})?.map(([_, language]) => (
+              <Text style={{ fontWeight: "300" }} key={language}>
+                {language}
+              </Text>
+            ))}
           </Text>
           <Text style={[styles.textStyle, { color: theme.list }]}>
             Ethnic group:{" "}
@@ -55,21 +61,29 @@ const CountryDetails = ({ route }) => {
           <Text style={[styles.textStyle, { color: theme.list }]}>
             Independence:{" "}
             <Text style={{ fontWeight: "300" }}>
-              {country?.["independent"]}
+              {country?.independent ? "true" : "false"}
             </Text>
           </Text>
           <Text style={[styles.textStyle, { color: theme.list }]}>
             Area: <Text style={{ fontWeight: "300" }}>{country?.area}</Text>
           </Text>
           <Text style={[styles.textStyle, { color: theme.list }]}>
-            Currency:{" "}
-            <Text style={{ fontWeight: "300" }}>
-              {country?.currencies?.name}
-            </Text>
+            Currency::{" "}
+            {Object.entries(country?.currencies || {})?.map(([_, currency]) => (
+              <Text style={{ fontWeight: "300" }} key={currency.name}>
+                {currency.name}
+              </Text>
+            ))}
           </Text>
           <Text style={[styles.textStyle, { color: theme.list }]}>
-            GDP: <Text style={{ fontWeight: "300" }}>{country?.capital}</Text>
+            GDP: <Text style={{ fontWeight: "300" }}>{}</Text>
           </Text>
+          {/* <View>
+            <Text style={styles.allText}>
+              National Income -{" "}
+              {country.gini !== null ? format(country.gini) : ""}
+            </Text>
+          </View> */}
         </View>
         <View style={styles.content}>
           <Text style={[styles.textStyle, { color: theme.list }]}>
@@ -82,7 +96,7 @@ const CountryDetails = ({ route }) => {
           </Text>
           <Text style={[styles.textStyle, { color: theme.list }]}>
             Dailing code:{" "}
-            <Text style={{ fontWeight: "300" }}>{country?.capital}</Text>
+            <Text style={{ fontWeight: "300" }}>{country?.callingCodes}</Text>
           </Text>
           <Text style={[styles.textStyle, { color: theme.list }]}>
             Driving side:{" "}

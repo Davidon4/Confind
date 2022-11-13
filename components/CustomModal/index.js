@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View, Modal, Button, SafeAreaView } from "react-native";
 import RadioButton from "../RadioButton";
-import { initialFilter } from "../../data/initialFilter";
+import { initialFilter } from "../../feature/initialFilter";
 
 const CustomModal = ({
   modalVisible,

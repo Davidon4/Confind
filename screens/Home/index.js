@@ -7,7 +7,7 @@ import { styles } from "./styles";
 import axios from "axios";
 import AppBar from "../../components/AppBar";
 import CustomModal from "../../components/CustomModal";
-import { initialFilter } from "../../data/initialFilter";
+import { initialFilter } from "../../feature/initialFilter";
 
 const Home = () => {
   const theme = useContext(ThemeContext);
@@ -57,17 +57,7 @@ const Home = () => {
   return (
     <View style={[styles.textContainer, { backgroundColor: theme.background }]}>
       <Search onChangeText={(text) => searchFilter(text)} value={search} />
-      <AppBar setModalVisible={setModalVisible} modalVisible={modalVisible} />
-      <CustomModal
-        modalVisible={modalVisible}
-        setModalVisible={setModalVisible}
-        filter={filter}
-        setFilter={setFilter}
-        intermediateFilter={intermediateFilter}
-        setIntermediateFilter={setIntermediateFilter}
-        continentResult={continentResult}
-        allCountries={allCountries}
-      />
+      <AppBar />
       <List data={filteredData} allCountries={allCountries} filter={filter} />
     </View>
   );
