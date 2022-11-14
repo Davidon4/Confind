@@ -78,12 +78,6 @@ const CountryDetails = ({ route }) => {
           <Text style={[styles.textStyle, { color: theme.list }]}>
             GDP: <Text style={{ fontWeight: "300" }}>{}</Text>
           </Text>
-          {/* <View>
-            <Text style={styles.allText}>
-              National Income -{" "}
-              {country.gini !== null ? format(country.gini) : ""}
-            </Text>
-          </View> */}
         </View>
         <View style={styles.content}>
           <Text style={[styles.textStyle, { color: theme.list }]}>

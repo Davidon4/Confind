@@ -1,41 +1,73 @@
-import { createSlice } from "@reduxjs/toolkit";
+import React, { useState, useEffect } from "react";
+import { StyleSheet, Dimensions } from "react-native";
+import RNPickerSelect from "react-native-picker-select";
 
-const initialState = {
-  capital: null,
-  region: null,
-  language: null,
-  population: null,
-  timezones: null,
+const initialFilter = ({ setFilteredValue }) => {
+  const [currentValue, setCurrentValue] = useState(null);
+  const [borderColor, setBorderColor] = useState("#ffffff22");
+
+  useEffect(() => {
+    inputStyles.inputIOS = { ...inputStyles.inputIOS, borderColor };
+  }, [borderColor]);
+
+  return (
+    <RNPickerSelect
+      style={inputStyles}
+      placeholder={{
+        label: "Filter by region",
+        value: null,
+      }}
+      items={[
+        {
+          label: "All",
+          value: "all",
+        },
+        {
+          label: "Europe",
+          value: "europe",
+        },
+        {
+          label: "Africa",
+          value: "africa",
+        },
+        {
+          label: "Asia",
+          value: "asia",
+        },
+        {
+          label: "Americas",
+          value: "americas",
+        },
+        {
+          label: "Oceania",
+          value: "oceania",
+        },
+      ]}
+      value={currentValue}
+      onValueChange={(value) => setCurrentValue(value)}
+      onDonePress={() => setFilteredValue(currentValue)}
+      onOpen={() => setBorderColor("#ffffff22")}
+      onClose={() => setBorderColor("#ffffff88")}
+    />
+  );
 };
 
-export const initialFilter = createSlice({
-  name: "filters",
-  initialState,
-  reducers: {
-    change: (state, action) => {
-      const { capital, region, language, population, timezones } =
-        action.payload;
-      state.capital = capital;
-      state.region = region;
-      state.language = language;
-      state.population = population;
-      state.timezones = timezones;
-    },
-    cleanAll: (state) => {
-      // Redux Toolkit allows us to write "mutating" logic in reducers. It
-      // doesn't actually mutate the state because it uses the Immer library,
-      // which detects changes to a "draft state" and produces a brand new
-      // immutable state based off those changes
-      state.capital = null;
-      state.region = null;
-      state.language = null;
-      state.population = null;
-      state.timezones = null;
-    },
+const inputStyles = StyleSheet.create({
+  inputIOS: {
+    fontSize: 16,
+    paddingVertical: 12,
+    paddingHorizontal: 10,
+    borderWidth: 1,
+    borderRadius: 4,
+    borderColor: "#ffffff22",
+    color: "white",
+    width: Dimensions.get("window").width - 60,
+    marginLeft: 30,
+    marginTop: 10,
+  },
+  placeholder: {
+    color: "#aaaaaa",
   },
 });
 
-// Action creators are generated for each case reducer function
-export const { change, cleanAll } = initialFilter.actions;
-
-export default initialFilter.reducer;
+export default initialFilter;

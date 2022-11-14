@@ -5,35 +5,9 @@ import ListItem from "../../components/ListItem";
 import { useNavigation } from "@react-navigation/native";
 import ThemeContext from "../../config/ThemeContext";
 
-const List = ({ data, allCountries, filter }) => {
-  let filterCountries = false;
-  let empty = false;
-
-  let filterArray = [];
-
-  filterCountries = allCountries;
-
+const List = ({ data }) => {
   const navigation = useNavigation();
   const theme = useContext(ThemeContext);
-
-  if (filterCountries != undefined && typeof filterCountries === "object") {
-    filterCountries.map((country) => {
-      if (
-        filter.continents != "" &&
-        !country.continents.includes(filter.continents)
-      ) {
-        return;
-      }
-
-      filterArray.push(country);
-    });
-    if (filterArray.length > 0) {
-      filterCountries = filterArray;
-    }
-  } else {
-    filterCountries = false;
-    empty = true;
-  }
 
   const renderItem = ({ item }) => {
     const onCountryPress = () => {
@@ -41,13 +15,6 @@ const List = ({ data, allCountries, filter }) => {
     };
     return <ListItem onPress={onCountryPress} {...item} />;
   };
-
-  // <ScrollView>
-  //   {filterCountries?.map((result) => (
-  //     <InfoCard result={result} />
-  //   ))}
-  //   {empty && <Text>No Fruits were fetched</Text>}
-  // </ScrollView>;
 
   const getData = () => {
     let countriesArr = [];

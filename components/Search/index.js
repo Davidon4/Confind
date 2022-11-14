@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { TextInput, View } from "react-native";
 import ThemeContext from "../../config/ThemeContext";
 import { styles } from "./styles";

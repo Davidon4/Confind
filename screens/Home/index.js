@@ -1,22 +1,18 @@
-import React, { useContext, useEffect, useState } from "react";
-import { View } from "react-native";
+import React, { useEffect, useState, useContext } from "react";
 import Search from "../../components/Search";
+import { View } from "react-native";
 import ThemeContext from "../../config/ThemeContext";
 import List from "../List";
 import { styles } from "./styles";
 import axios from "axios";
 import AppBar from "../../components/AppBar";
-import CustomModal from "../../components/CustomModal";
-import { initialFilter } from "../../feature/initialFilter";
 
 const Home = () => {
   const theme = useContext(ThemeContext);
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
   const [filteredData, setFilteredData] = useState([]);
-  const [modalVisible, setModalVisible] = useState(false);
-  const [filter, setFilter] = useState(initialFilter);
-  const [intermediateFilter, setIntermediateFilter] = useState(initialFilter);
+
   useEffect(() => {
     axios
       .get("https://restcountries.com/v3.1/all")
@@ -28,14 +24,6 @@ const Home = () => {
         console.error(error);
       });
   }, []);
-
-  const allCountries = Object.values(data);
-
-  const continentResult = allCountries
-    .map((item) => item?.continents)
-    .filter((value, index, self) => self.indexOf(value) === index);
-
-  console.log("Continent Result=>", continentResult);
 
   const searchFilter = (text) => {
     if (text) {
@@ -58,7 +46,7 @@ const Home = () => {
     <View style={[styles.textContainer, { backgroundColor: theme.background }]}>
       <Search onChangeText={(text) => searchFilter(text)} value={search} />
       <AppBar />
-      <List data={filteredData} allCountries={allCountries} filter={filter} />
+      <List data={filteredData} />
     </View>
   );
 };

@@ -3,9 +3,11 @@ import { View, TouchableOpacity, Text } from "react-native";
 import ThemeContext from "../../config/ThemeContext";
 import { AntDesign } from "@expo/vector-icons";
 import { styles } from "./styles";
+import { useNavigation } from "@react-navigation/native";
 
-const AppBar = ({ setModalVisible, modalVisible }) => {
+const AppBar = ({ setFilteredValue }) => {
   const theme = useContext(ThemeContext);
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.iconContainer1}>
@@ -13,7 +15,7 @@ const AppBar = ({ setModalVisible, modalVisible }) => {
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.iconContainer2}
-        onPress={() => setModalVisible(!modalVisible)}
+        setFilteredValue={setFilteredValue}
       >
         <AntDesign name="filter" size={24} color={theme.list} />
         <Text style={{ color: theme.list }}>Filter</Text>
