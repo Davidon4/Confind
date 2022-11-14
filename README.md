@@ -65,8 +65,6 @@ I am currently on the stage of applying the filter, Another issue I am facing is
 
 ## Link to the Apk file
 
-https://drive.google.com/drive/u/2/my-drive
-
 ---
 
 ## Link to the Appetize.io and usage
