@@ -13,10 +13,7 @@ const AppBar = ({ setFilteredValue }) => {
       <TouchableOpacity style={styles.iconContainer1}>
         <AntDesign name="earth" size={24} color={theme.list} />
       </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.iconContainer2}
-        setFilteredValue={setFilteredValue}
-      >
+      <TouchableOpacity style={styles.iconContainer2}>
         <AntDesign name="filter" size={24} color={theme.list} />
         <Text style={{ color: theme.list }}>Filter</Text>
       </TouchableOpacity>

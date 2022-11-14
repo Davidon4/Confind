@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import AppNavigator from "./navigation/AppNavigator";
-import { Provider } from "react-redux";
-import { store } from "./store";
 import { EventRegister } from "react-native-event-listeners";
 import ThemeContext from "./config/ThemeContext";
 import theme from "./config/theme";
