@@ -29,7 +29,6 @@ export default function ScreenStack() {
           options={({ route }) => ({
             title: route?.params?.name?.common,
             headerTitleAlign: "center",
-            title: "",
             headerShadowVisible: false,
             headerBackTitle: "Back",
           })}

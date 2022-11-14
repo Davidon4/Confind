@@ -32,7 +32,7 @@ const CountryDetails = ({ route }) => {
             <Text style={{ fontWeight: "300" }}>{country?.capital}</Text>
           </Text>
           <Text style={[styles.textStyle, { color: theme.list }]}>
-            Motto: <Text style={{ fontWeight: "300" }}>{country?.capital}</Text>
+            Motto: <Text style={{ fontWeight: "300" }}>{country?.motto}</Text>
           </Text>
         </View>
         <View style={styles.content}>
@@ -49,12 +49,16 @@ const CountryDetails = ({ route }) => {
             <Text style={{ fontWeight: "300" }}>{country?.region}</Text>
           </Text>
           <Text style={[styles.textStyle, { color: theme.list }]}>
-            Religion:{" "}
-            <Text style={{ fontWeight: "300" }}>{country?.capital}</Text>
+            Top Level Domain:{" "}
+            {country?.tld?.map((domain) => (
+              <Text style={{ fontWeight: "300" }} key={domain}>
+                {domain}
+              </Text>
+            ))}
           </Text>
           <Text style={[styles.textStyle, { color: theme.list }]}>
             Government:{" "}
-            <Text style={{ fontWeight: "300" }}>{country?.capital}</Text>
+            <Text style={{ fontWeight: "300" }}>{country?.government}</Text>
           </Text>
         </View>
         <View style={styles.content}>
@@ -89,13 +93,22 @@ const CountryDetails = ({ route }) => {
             <Text style={{ fontWeight: "300" }}>{country?.region}</Text>
           </Text>
           <Text style={[styles.textStyle, { color: theme.list }]}>
-            Dailing code:{" "}
-            <Text style={{ fontWeight: "300" }}>{country?.callingCodes}</Text>
-          </Text>
-          <Text style={[styles.textStyle, { color: theme.list }]}>
             Driving side:{" "}
             <Text style={{ fontWeight: "300" }}>{country?.car?.side}</Text>
           </Text>
+          <Text style={[styles.textStyle, { color: theme.list }]}>
+            Border:{" "}
+          </Text>
+          <View style={styles.borders}>
+            {country?.borders?.map((border) => (
+              <View
+                key={border}
+                style={[styles.border, { backgroundColor: theme.section }]}
+              >
+                <Text style={styles.item}>{border}</Text>
+              </View>
+            ))}
+          </View>
         </View>
       </ScrollView>
     </>
