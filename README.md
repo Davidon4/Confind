@@ -12,6 +12,7 @@ The main goal of this application is to create a React Application to show a lis
 - [Features I would like to add if there is more time](#features-i-would-like-to-add-if-there-is-more-time)
 - [Link to the Apk file](#link-to-the-apk-file)
 - [Link to the Appetize.io and usage](#link-to-the-appetize.io)
+- [Images of the app](#images-of-the-app)
 - [Usage](#usage)
 - [License](#license)
 - [Author](#author)
@@ -46,12 +47,14 @@ The following are the folder used and what they mean:
 - react-native-event-listeners: I was able to bypass using redux and with react native event listener i passed a touch event on the which controls the theme of the app
 - @react-navigation/native and @react-navigation/native-stack: With react native navigation, it was easy to navigate across the app
 - expo-font: I was able to create a design from the figma design using google font in which expo supports
+- react-native-picker-select: I was able to use this on the filter button
+- axios: With axios, I was able to call the api, instead of using a fetch method with can't handle large data efficiently
 
 ---
 
 ## Features I would like to add if there is more time
 
-I am currently behind schedule and having issues with light and network, I hope I am able to finish this project at the point of writing this readme and submit it before the ddeadline.
+I am currently on the stage of applying the filter, Another issue I am facing is I am trying as much as possible not to use third-party libraries, because some third party libraries I implemented on some features crashes the app and makes it lag. The originality of the code is the less use of third party library, The downside is I am not able to finish some features on the app hardcoding them.
 
 ---
 
@@ -62,6 +65,21 @@ I am currently behind schedule and having issues with light and network, I hope 
 ## Link to the Appetize.io and usage
 
 ---
+
+## Images of the app
+
+<div align="center">
+  <img width="32%" src="./assets/Images/White-home.jpeg">
+  <img width="32%" src="./assets/Images/White-Details.jpeg">
+  <img width="32%" src="./assets/Images/Dark-home.jpeg">
+  <img width="32%" src="./assets/Images/Black-Details.jpeg">
+</div>
+<br>
+<div align="center">
+  <h3>React Native Countries App</h3>
+  <img src="https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="react native">
+  <img src="https://img.shields.io/badge/expo-1C1E24?style=for-the-badge&logo=expo&logoColor=#D04A37" alt="expo">
+</div>
 
 ## Usage
 
