@@ -16,7 +16,7 @@ The main goal of this application is to create a React Application to show a lis
 - [Libraries used and Why](#libraries-used-and-why)
 - [Features I would like to add if there is more time](#features-i-would-like-to-add-if-there-is-more-time)
 - [Link to the Apk file](#link-to-the-apk-file)
-- [Link to the Appetize.io and usage](#link-to-the-appetize.io)
+- [Link to the Appetize.io](#link-to-the-appetize.io)
 - [Images of the app](#images-of-the-app)
 - [Usage](#usage)
 - [License](#license)
@@ -65,9 +65,13 @@ I am currently on the stage of applying the filter, Another issue I am facing is
 
 ## Link to the Apk file
 
+https://drive.google.com/drive/u/2/my-drive
+
 ---
 
-## Link to the Appetize.io and usage
+## Link to the Appetize.io
+
+https://appetize.io/app/n6x2ooobzcxie5bfm24rssg2si?device=pixel4&osVersion=11.0&scale=75
 
 ---
 
