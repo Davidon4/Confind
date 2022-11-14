@@ -2,6 +2,12 @@
 
 The main goal of this application is to create a React Application to show a list of countries, and then showing for each country the data associated to it.
 
+<div align="center">
+  <h3>React Native Countries App</h3>
+  <img src="https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="react native">
+  <img src="https://img.shields.io/badge/expo-1C1E24?style=for-the-badge&logo=expo&logoColor=#D04A37" alt="expo">
+</div>
+
 ---
 
 ## Table of Contents
@@ -74,12 +80,8 @@ I am currently on the stage of applying the filter, Another issue I am facing is
   <img width="32%" src="./assets/Images/Dark-home.jpeg">
   <img width="32%" src="./assets/Images/Black-Details.jpeg">
 </div>
-<br>
-<div align="center">
-  <h3>React Native Countries App</h3>
-  <img src="https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="react native">
-  <img src="https://img.shields.io/badge/expo-1C1E24?style=for-the-badge&logo=expo&logoColor=#D04A37" alt="expo">
-</div>
+
+---
 
 ## Usage
 
